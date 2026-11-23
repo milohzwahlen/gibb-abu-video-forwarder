@@ -1,6 +1,6 @@
 # Video-Weiterleitung
 
-Statische Seite für GitHub Pages, die sofort auf ein YouTube-Video weiterleitet.
+Statische Seite für GitHub Pages, die sofort auf die Videodokumentation unserer Vertiefungsarbeit weiterleitet.
 
 ## Ziel ändern
 
