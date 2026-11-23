@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Weiterleitung …</title>
+
+    <meta content="0; url=https://www.youtube.com/watch?v=Z_LmiQlT9oE" http-equiv="refresh">
+
+    <meta content="noindex" name="robots">
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            box-sizing: border-box;
+            text-align: center;
+            background: #fff;
+            color: #111;
+        }
+
+        a {
+            color: #c00;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #111;
+                color: #eee;
+            }
+
+            a {
+                color: #f55;
+            }
+        }
+    </style>
+    <script>
+        (function () {
+            var m = document.querySelector('meta[http-equiv="refresh"]');
+            var target = m && m.content.split(/url=/i)[1];
+            if (!target) return;
+            window.__target = target;
+            try {
+                window.location.replace(target);
+            } catch (e) {
+                window.location.href = target;
+            }
+        })();
+    </script>
+</head>
+<body>
+<p>Du wirst zum Video weitergeleitet …<br><br>
+    Falls nichts passiert: <a href="#" id="link">hier tippen</a></p>
+<script>
+    if (window.__target) document.getElementById('link').href = window.__target;
+</script>
+</body>
+</html>
